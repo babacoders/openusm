@@ -36,8 +36,8 @@ optional arguments:
   -c CONFIG, --config CONFIG
                         XML File to be imported
   -f IPS, --ips IPS     IP files to be updated
-
 ```
+
 ## Updating BIOS Token Change for Single System 
 
 ```
@@ -50,3 +50,7 @@ $bios-token.py -i <iDRAC-IP> -s /var/nfsshare -c myconfig.xml -n <NFS-IP>
 ```
 $bios-token.py -f <list-of-ips.txt> -s /var/nfsshare -c myconfig.xml -n <NFS-IP>
 ```
+
+## What does this script do?
+
+This script will create as many Docker containers based on number of systems, does BIOS token change and pushes the logs to Elasticsearch if in case elasticsearch container is already running on the systems.
