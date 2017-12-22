@@ -5,7 +5,7 @@
 - Existing NFS Server
 - Latest version of Docker Installed (17.06+)
 - Python 2.7+ 
-- [Sample of BIOS Token Changes](samples/biosconfig.xml)
+- [Sample of BIOS Token Changes](../samples/biosconfig.xml)
 
 
 ## Clone the OpenUSM Repository
