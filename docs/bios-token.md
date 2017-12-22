@@ -53,4 +53,4 @@ $bios-token.py -f <list-of-ips.txt> -s /var/nfsshare -c myconfig.xml -n <NFS-IP>
 
 ## What does this script do?
 
-This script will create as many Docker containers based on number of systems, does BIOS token change and pushes the logs to Elasticsearch if in case elasticsearch container is already running on the systems.
+This script will create as many Docker containers based on number of systems. It means that for every iDRAC IP address, a Docker container will be spun up which does BIOS token change, which is automatically handled by Lifecycle controller and gets rebooted automatically. PLEASE NOTE THAT NO MANUAL REBOOT IS REQUIRED.
