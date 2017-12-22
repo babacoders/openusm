@@ -48,8 +48,11 @@ $bios-token.py -i <iDRAC-IP> -s /var/nfsshare -c biosconfig.xml -n <NFS-IP>
 
 
 ```
-$bios-token.py -f <list-of-ips.txt> -s /var/nfsshare -c biosconfig.xml -n <NFS-IP>
+$bios-token.py -f ips.txt -s /var/nfsshare -c biosconfig.xml -n <NFS-IP>
 ```
+where,
+
+ips.txt is a file which includes list of iDRAC IP address. Check out the same file format under [ips.txt](../ips.txt)
 
 ## What does this script do?
 
