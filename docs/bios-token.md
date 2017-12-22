@@ -16,14 +16,14 @@ $ git clone https://github.com/openusm/openusm
 $ cd openusm
 ```
 
-## Executing the Script
+## A Quick Look at Script Options
 
 ```
-root@ubuntu-1610:~/openusm$ python bios-token.py --help
+$ python bios-token.py --help
 usage: bios-token.py [-h] [--verbose] [-i IDRAC] [-n NFS] [-s SHARE]
                      [-c CONFIG] [-f IPS]
 
-Welcome to Universal Systems ManagerBios Token Change
+Welcome to Universal Systems Manager Bios Token Change
 
 optional arguments:
   -h, --help            show this help message and exit
