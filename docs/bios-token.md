@@ -41,14 +41,14 @@ optional arguments:
 ## Updating BIOS Token Change for Single System 
 
 ```
-$bios-token.py -i <iDRAC-IP> -s /var/nfsshare -c myconfig.xml -n <NFS-IP>
+$bios-token.py -i <iDRAC-IP> -s /var/nfsshare -c biosconfig.xml -n <NFS-IP>
 ```
 
 ## Updating BIOS Token Change for Multiple System
 
 
 ```
-$bios-token.py -f <list-of-ips.txt> -s /var/nfsshare -c myconfig.xml -n <NFS-IP>
+$bios-token.py -f <list-of-ips.txt> -s /var/nfsshare -c biosconfig.xml -n <NFS-IP>
 ```
 
 ## What does this script do?
