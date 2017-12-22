@@ -19,11 +19,12 @@ A modern approach to Server Management solution integrated with monitoring & log
 
 # Architecture
 
-![alt text](https://github.com/openusm/openusm/blob/master/images/openusm_architecture.png)
+![alt text](https://github.com/openusm/openusm/blob/master/images/how_openusm_works.png)
 
 # How openUSM works?
 
-![alt text](https://github.com/openusm/openusm/blob/master/images/how_openusm_works.png)
+![alt text](https://github.com/openusm/openusm/blob/master/images/openusm_architecture.png)
+
 
 # Documentation
 
