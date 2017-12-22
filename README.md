@@ -26,6 +26,14 @@ A modern approach to Server Management solution integrated with monitoring & log
 ![alt text](https://github.com/openusm/openusm/blob/master/images/openusm_architecture.png)
 
 
+# Getting Started with OpenUSM
+
+OpenUSM is a suite of tools and utilities which configures and manage the lifecycle of system management. OpenUSM has a capability to perform the following functions:
+
+[BIOS Token Change](docs/bios-token.md)
+[Firmware Update](docs/firmware.md)
+
+
 # Documentation
 
 Check out our guides for documentation, deployment guides and tutorials.
