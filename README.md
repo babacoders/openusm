@@ -23,7 +23,7 @@ A modern approach to Server Management solution integrated with monitoring & log
 
 # How openUSM works?
 
-![alt text](https://github.com/openusm/openusm/blob/master/images/openusm_architecture.png)
+![alt text](https://github.com/openusm/openusm/blob/master/images/how_openusm_works.png)
 
 # Documentation
 
