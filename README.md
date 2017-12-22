@@ -1,5 +1,8 @@
 # Open Universal Systems Manager
 
+![alt text](https://github.com/openusm/openusm/blob/master/images/openusm_logo.png)
+
+
 A modern approach to Server Management solution integrated with monitoring & logging pipeline using Docker & Microservices.
 
 # Highlights
@@ -16,7 +19,11 @@ A modern approach to Server Management solution integrated with monitoring & log
 
 # Architecture
 
+![alt text](https://github.com/openusm/openusm/blob/master/images/openusm_architecture.png)
+
 # How openUSM works?
+
+![alt text](https://github.com/openusm/openusm/blob/master/images/openusm_architecture.png)
 
 # Documentation
 
