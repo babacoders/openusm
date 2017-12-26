@@ -56,3 +56,11 @@ By default, the stack exposes the following ports:
 * 9300: Elasticsearch TCP transport
 * 5601: Kibana
 
+## Pushing BIOS Configuration Logs from iDRAC to Kibana UI
+
+
+
+Open up kibana and you can see that the logs as shown below:
+
+https://github.com/openusm/openusm/blob/master/images/idrac_elk.png
+
