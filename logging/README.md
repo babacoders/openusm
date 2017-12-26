@@ -62,5 +62,9 @@ Try updating the BIOS Token using [this](https://github.com/openusm/openusm/blob
 
 Open up kibana and you can see that the logs as shown below:
 
-![alt text](https://github.com/openusm/openusm/blob/master/images/idrac_elk.png)
+![alt_text](https://github.com/openusm/openusm/blob/master/images/idrac_elk.png)
+
+Want to see it in action?
+Refer : [Watch](https://youtu.be/jbg4gcp0M8M)
+
 
