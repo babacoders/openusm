@@ -58,7 +58,7 @@ By default, the stack exposes the following ports:
 
 ## Pushing BIOS Configuration Logs from iDRAC to Kibana UI
 
-
+Try updating the BIOS Token using [this](https://github.com/openusm/openusm/blob/master/docs/bios-token.md) link.
 
 Open up kibana and you can see that the logs as shown below:
 
