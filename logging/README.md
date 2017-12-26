@@ -62,5 +62,5 @@ By default, the stack exposes the following ports:
 
 Open up kibana and you can see that the logs as shown below:
 
-https://github.com/openusm/openusm/blob/master/images/idrac_elk.png
+![alt text](https://github.com/openusm/openusm/blob/master/images/idrac_elk.png)
 
