@@ -31,7 +31,7 @@ A modern approach to Server Management solution integrated with monitoring & log
 OpenUSM is a suite of tools and utilities which configures and manage the lifecycle of system management. OpenUSM has a capability to perform the following functions:
 
 [BIOS Token Change](docs/bios-token.md) <br>
-[Firmware Update](docs/firmware.md)
+[Firmware Update](docs/firmware.md)<br>
 [Pushing iDRAC Logs to ELK Stack(docs/idrac2elk.md)
 
 
