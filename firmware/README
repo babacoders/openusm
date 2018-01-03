@@ -1,0 +1,16 @@
+# Instruction
+
+
+```
+python ./myupdate.py 100.98.26.37 root calvin /root/Python26 BIOS_79GKV_LN_1.2.11_01.BIN NowAndReboot
+SSL Certificate exists!
+cer-100.98.26.37.cer
+
+- WARNING, downloading DUP payload to iDRAC
+
+
+- FAIL: Post command failed to download, error is <Response [400]>
+
+More details on status code error: {"error":{"@Message.ExtendedInfo":[{"Message":"Unable to upload the firmware image because the file extension is not supported.","MessageArgs":[],"MessageArgs@odata.count":0,"MessageId":"iDRAC.1.5.SYS434","RelatedProperties":[],"RelatedProperties@odata.count":0,"Resolution":"Make sure to use a valid firmware image and retry the operation. For information about the supported file extension types, see the Redfish Users Guide available on the support site.","Severity":"Warning"}],"code":"Base.1.0.GeneralError","message":"A general error has occurred. See ExtendedInfo for more information"}}
+
+```
