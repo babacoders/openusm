@@ -2,9 +2,9 @@
 
 
 ```
-root@debian:~# python ./myupdate.py  100.98.26.37 root calvin /root/Python26 idrac-with-lifecycle-controller_firmware_vp4c2_wn64_3.15.15.15_a00.exe now
+root@debian:~# python ./myupdate.py  100.98.26.46 root calvin /root/Python26 idrac-with-lifecycle-controller_firmware_vp4c2_wn64_3.15.15.15_a00.exe nextreboot
 SSL Certificate exists!
-cer-100.98.26.37.cer
+cer-100.98.26.46.cer
 
 - WARNING, downloading DUP payload to iDRAC
 
@@ -13,16 +13,84 @@ cer-100.98.26.37.cer
 
 - Message:Package successfully downloaded.
 - FW file version is: 3.15.15.15
+/redfish/v1/UpdateService/FirmwareInventory/Available-25227-3.15.15.15
 
 - WARNING, installing downloaded firmware payload to device
 
-Traceback (most recent call last):
-  File "./myupdate.py", line 254, in <module>
-    install_image_payload()
-  File "./myupdate.py", line 135, in install_image_payload
-    job_id_location = response.headers['Location']
-  File "/usr/lib/python2.7/dist-packages/requests/structures.py", line 54, in __getitem__
-    return self._store[key.lower()][1]
-KeyError: 'location'
+{'cookies': <RequestsCookieJar[]>, '_content': '', 'headers': {'Content-Length': '0', 'Keep-Alive': 'timeout=60, max=100', 'Server': 'Apache/2.4', 'Connection': 'Keep-Alive', 'Location': '/redfish/v1/TaskService/Tasks/JID_150705473818', 'Cache-Control': 'no-cache', 'Date': 'Thu, 04 Jan 2018 12:55:46 GMT', 'OData-Version': '4.0', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json;odata.metadata=minimal;charset=utf-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://100.98.26.46/redfish/v1/UpdateService/Actions/Oem/DellUpdateService.Install', 'status_code': 202, '_content_consumed': True, 'encoding': 'utf-8', 'request': <PreparedRequest [POST]>, 'connection': <requests.adapters.HTTPAdapter object at 0x7f94a251ca10>, 'elapsed': datetime.timedelta(0, 0, 697218), 'raw': <requests.packages.urllib3.response.HTTPResponse object at 0x7f94a23fb550>, 'reason': 'Accepted', 'history': []}
+
+- PASS, JID_150705473818 job ID successfully created
+
+
+- Query job ID command passed
+
+- Job not marked completed, current status is: New
+- Message: New
+
+- Current job execution time is: 0:00:37
+
+
+- Query job ID command passed
+
+- Job not marked completed, current status is: New
+- Message: Downloading the idrac-with-lifecycle-controller_firmware_vp4c2_wn64_3.15.15.15_a00.exe update package.
+
+- Current job execution time is: 0:00:48
+
+
+- Query job ID command passed
+
+- Job not marked completed, current status is: New
+- Message: Downloading the idrac-with-lifecycle-controller_firmware_vp4c2_wn64_3.15.15.15_a00.exe update package.
+
+- Current job execution time is: 0:01:00
+
+
+- Query job ID command passed
+
+- Job not marked completed, current status is: New
+- Message: Downloading the idrac-with-lifecycle-controller_firmware_vp4c2_wn64_3.15.15.15_a00.exe update package.
+
+- Current job execution time is: 0:01:11
+
+
+- Query job ID command passed
+
+- Job not marked completed, current status is: New
+- Message: Downloading the idrac-with-lifecycle-controller_firmware_vp4c2_wn64_3.15.15.15_a00.exe update package.
+
+- Current job execution time is: 0:01:23
+
+
+- Query job ID command passed
+
+- Job not marked completed, current status is: New
+- Message: Downloading the idrac-with-lifecycle-controller_firmware_vp4c2_wn64_3.15.15.15_a00.exe update package.
+
+- Current job execution time is: 0:01:34
+
+
+- Query job ID command passed
+
+- Job not marked completed, current status is: New
+- Message: Downloading the idrac-with-lifecycle-controller_firmware_vp4c2_wn64_3.15.15.15_a00.exe update package.
+
+- Current job execution time is: 0:01:45
+
+
+- Query job ID command passed
+
+- Job not marked completed, current status is: New
+- Message: Downloading the idrac-with-lifecycle-controller_firmware_vp4c2_wn64_3.15.15.15_a00.exe update package.
+
+- Current job execution time is: 0:01:57
+
+
+- Query job ID command passed
+
+
+- WARNING, device selected is immediate update, incorrect install option passed in.
+- JID_150705473818 still marked completed and firmware updated
+root@debian:~#
 
 ```
