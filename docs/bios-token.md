@@ -16,6 +16,12 @@ $ git clone https://github.com/openusm/openusm
 $ cd openusm
 ```
 
+## Copy biosconfig.xml file to NFS Share
+
+```
+$cp -rf samples/biosconfig.xml /var/nfsshare/
+```
+
 ## A Quick Look at Script Options
 
 ```
