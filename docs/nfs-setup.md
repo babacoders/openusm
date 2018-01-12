@@ -4,7 +4,7 @@
 [CentOS](docs/nfs/centos) <br>
 [Windows](docs/nfs/windows)<br>
 [RHEL](docs/nfs/rhel)<br>
-[Ubuntu](docs/nfs/ubuntu)<br>
+[Ubuntu](docs/nfs/ubuntu)
 
 ## Using Traditional Method
 
