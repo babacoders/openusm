@@ -47,7 +47,7 @@ optional arguments:
 ## Updating BIOS Token Change for Single System 
 
 ```
-$bios-token.py -i <iDRAC-IP> -s /var/nfsshare -c biosconfig.xml -n <NFS-IP>
+$python bios-token.py -i <iDRAC-IP> -s /var/nfsshare -c biosconfig.xml -n <NFS-IP>
 ```
 
 ## Updating BIOS Token Change for Multiple System
