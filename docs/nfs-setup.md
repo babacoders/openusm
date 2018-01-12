@@ -1,5 +1,11 @@
 # Configuring NFS Server 
 
+[Debian](docs/nfs/debian) <br>
+[CentOS](docs/nfs/centos) <br>
+[Windows](docs/nfs/windows)<br>
+[RHEL](docs/nfs/rhel)<br>
+[Ubuntu](docs/nfs/ubuntu)<br>
+
 ## Using Traditional Method
 
 ## Installing NFS 
