@@ -1,22 +1,4 @@
-#
-# DeviceFirmwareUpdateREDFISH. Python script using Redfish API to update a device firmware. Supported file image types are Windows DUPs, d7/d9 image or pm files.
-#
-# NOTE: If you are updating a device which doesn't need a server reboot to apply the update (Example: iDRAC, DIAGS, Driver Pack, ISM, OSC), pass in a value of "Now" for Install Option. All other devices which require a server reboot to apply the update (BIOS, CPLD, NIC, PERC, PSU, FC, HDs, Backplane), pass in NowAndReboot or NextReboot for Install Option.
-#
-# NOTE: Supported values for Install_Option are: Now, NowAndReboot and NextReboot. Make sure you pass in the exact value as stated (values are case sensitive). For NextReboot value, the update job will still get created and scheduled but will not get applied until the next server reboot executed by the user.
-#
-# _author_ = Texas Roemer <Texas_Roemer@Dell.com>
-# _version_ = 1.0
-#
-# Copyright (c) 2017, Dell, Inc.
-#
-# This software is licensed to you under the GNU General Public License,
-# version 2 (GPLv2). There is NO WARRANTY for this software, express or
-# implied, including the implied warranties of MERCHANTABILITY or FITNESS
-# FOR A PARTICULAR PURPOSE. You should have received a copy of GPLv2
-# along with this software; if not, see
-# http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.
-#
+# Python Script to perform DellEMC firmware update
 
 import requests, json, sys, re, time, os,warnings
 import argparse
