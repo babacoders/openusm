@@ -52,6 +52,8 @@ def main():
 
                 firmware_file = os.path.abspath(firmware_file)
 
+                print idrac_ip, idrac_password, idrac_username, firmware_file
+
                 os.system("docker build -t ajeetraina/usm_redfish . ")
 
                 if (args.ips):
@@ -64,15 +66,13 @@ def main():
                         print ("Iteration %s" % ip)
 
                         ip = ip.strip()
-                            command = "docker run -v `pwd`:`pwd` --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.181:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s  -e USERNAME=%s -e PASSWORD=%s -e FIRMWARE_FILE=%s ajeetraina/openusm python update.py &" % (
+                        command = "docker run -v `pwd`:`pwd` --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.181:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s  -e USERNAME=%s -e PASSWORD=%s -e FIRMWARE_FILE=%s ajeetraina/openusm python update.py &" % (
                         ip, ip, idrac_username,idrac_password,firmware_file)
                         print command
                         os.system(command)
 
                 if (args.idrac):
-                    os.system(
-                        "docker run -v `pwd`:`pwd` --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.181:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e USERNAME=%s -e PASSWORD=%s -e FIRMWARE_FILE=%s ajeetraina/openusm python update.py &" % (
-                            idrac, idrac, idrac_username,idrac_password,firmware_file))
+                    os.system("docker run -v `pwd`:`pwd` --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.181:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e USERNAME=%s -e PASSWORD=%s -e FIRMWARE_FILE=%s ajeetraina/openusm python update.py &" % (idrac_ip, idrac_ip, idrac_username,idrac_password,firmware_file))
 
 
         except Exception as e:
@@ -80,27 +80,8 @@ def main():
                 print e.message
                 sys.exit()
 
-        print idrac_ip,idrac_password,idrac_username,firmware_file
-        start_time=datetime.now()
-        Install_Option = "nowandreboot"
 
-        # Code to convert install option to correct string due to case sensitivity in iDRAC.
-        if Install_Option == "now":
-                install_option = "Now"
-        elif Install_Option == "nowandreboot":
-                install_option = "NowAndReboot"
-        elif Install_Option == "nextreboot":
-                install_option = "NextReboot"
-        else:
-                install_option = Install_Option
 
-        download_image_payload()
-        install_image_payload()
-        if install_option == "NowAndReboot" or install_option == "Now":
-                check_job_status_host_reboot()
-                check_new_FW_version()
-        else:
-                check_job_status()
 
 if __name__ == "__main__":
         main()
