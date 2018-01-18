@@ -73,7 +73,7 @@ def main():
 
                 if (args.idrac):
                     print "Entering the Execution"
-                    test = os.system("docker run -v `pwd`:`pwd` --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.181:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e USERNAME=%s -e PASSWORD=%s -e FIRMWARE_FILE=%s ajeetraina/openusm python update.py &" % (idrac_ip, idrac_ip, idrac_username,idrac_password,firmware_file))
+                    test = os.system("docker run -v `pwd`:`pwd` -itd --name=%s_server -e IDRAC_IP=%s -e USERNAME=%s -e PASSWORD=%s -e FIRMWARE_FILE=%s ajeetraina/openusm python update.py &" % (idrac_ip, idrac_ip, idrac_username,idrac_password,firmware_file))
                     print test
 
         except Exception as e:
