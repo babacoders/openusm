@@ -12,6 +12,8 @@ idrac_ip = idrac_username = idrac_password = firmware_file = install_option = ""
 
 
 
+
+
 #Function to get certificate from server
 def get_cert(ipaddress, port = 443):
     """
@@ -245,13 +247,22 @@ def main():
         global idrac_ip, idrac_username,idrac_password,firmware_file,install_option
         # Code to validate all correct parameters are passed in
         try:
-                parser = create_parser()
-                args = parser.parse_args()
+                # parser = create_parser()
+                # args = parser.parse_args()
+                #
+                # idrac_ip = args.ip
+                # idrac_username = args.username
+                # idrac_password = args.password
+                # firmware_file = args.file
+                # idrac_ip = "100.98.26.37";
+                idrac_ip = os.environ['IDRAC_IP']
 
-                idrac_ip = args.ip
-                idrac_username = args.username
-                idrac_password = args.password
-                firmware_file = args.file
+                idrac_username = os.environ['USERNAME']
+
+                idrac_password = os.environ['PASSWORD']
+
+                # file_name = "R730_myxmlSCP.xml";
+                firmware_file = os.environ['FIRMWARE_FILE']
 
                 firmware_file = os.path.abspath(firmware_file)
 
