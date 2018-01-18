@@ -54,7 +54,7 @@ def main():
 
                 print idrac_ip, idrac_password, idrac_username, firmware_file
 
-                os.system("docker build -t ajeetraina/usm_redfish . ")
+                os.system("docker build -t ajeetraina/openusm . ")
 
                 if (args.ips):
 
@@ -72,8 +72,9 @@ def main():
                         os.system(command)
 
                 if (args.idrac):
-                    os.system("docker run -v `pwd`:`pwd` --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.181:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e USERNAME=%s -e PASSWORD=%s -e FIRMWARE_FILE=%s ajeetraina/openusm python update.py &" % (idrac_ip, idrac_ip, idrac_username,idrac_password,firmware_file))
-
+                    print "Entering the Execution"
+                    test = os.system("docker run -v `pwd`:`pwd` --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.181:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e USERNAME=%s -e PASSWORD=%s -e FIRMWARE_FILE=%s ajeetraina/openusm python update.py &" % (idrac_ip, idrac_ip, idrac_username,idrac_password,firmware_file))
+                    print test
 
         except Exception as e:
                 print("\n- FAIL, you must pass in script name along with iDRAC IP / iDRAC username / iDRAC password / Image Path / Filename / Install Option. Example: \" script_name.py 192.168.0.120 root calvin c:\Python26 bios.exe NowAndReboot\"")
