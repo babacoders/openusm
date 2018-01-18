@@ -64,14 +64,14 @@ def main():
                         print ("Iteration %s" % ip)
 
                         ip = ip.strip()
-                            command = "docker run --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.181:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s  -e USERNAME=%s -e PASSWORD=%s -e FIRMWARE_FILE=%s ajeetraina/openusm python update.py &" % (
+                            command = "docker run -v `pwd`:`pwd` --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.181:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s  -e USERNAME=%s -e PASSWORD=%s -e FIRMWARE_FILE=%s ajeetraina/openusm python update.py &" % (
                         ip, ip, idrac_username,idrac_password,firmware_file)
                         print command
                         os.system(command)
 
                 if (args.idrac):
                     os.system(
-                        "docker run --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.181:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e USERNAME=%s -e PASSWORD=%s -e FIRMWARE_FILE=%s ajeetraina/openusm python update.py &" % (
+                        "docker run -v `pwd`:`pwd` --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.181:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e USERNAME=%s -e PASSWORD=%s -e FIRMWARE_FILE=%s ajeetraina/openusm python update.py &" % (
                             idrac, idrac, idrac_username,idrac_password,firmware_file))
 
 
