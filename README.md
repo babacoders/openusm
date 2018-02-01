@@ -7,21 +7,27 @@ A modern approach to Server Management solution integrated with monitoring & log
 
 # Highlights
 
-- USM is bundled as Docker Images which is lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings. Hence, no need of host dependencies packages
-- USM is an out-of-band system management solution purely based on Redfish API Interface.
+- OpenUSM is a suite of open source tools/scripts which purely uses Redfish API to perform Server Management tasks using Docker containers.
+- OpenUSM can be bundled as Docker Images which is lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings. Hence, no need of host dependencies packages
+- OpenUSM is an out-of-band system management solution purely based on Redfish API Interface.
 - It is a platform agnostic solution(can be run from laptop, server or cloud) and works on any of Linux or Windows platform with Docker Engine running on top of it.
 
 # Value Proposition
 
-- USM architecture can scale both vertically & horizontally
-- USM architecture can be easy integrated and extended with 3rd party open source tools.(example - the choice of InfluxDB instead of Prometheus as monitoring tool, using 3rd Party logging tool instead of ELK stack etc.)
-- USM bundle can be built and customized by the customer based on their own needs and holds a plug-and-play components and functionalities.
+- OpenUSM architecture can scale both vertically & horizontally
+- OpenUSM architecture can be easy integrated and extended with 3rd party open source tools.(example - the choice of InfluxDB instead of Prometheus as monitoring tool, using 3rd Party logging tool instead of ELK stack etc.)
+- OpenUSM bundle can be built and customized by anyone based on the needs and holds a plug-and-play components and functionalities.
+- OpenUSM can easily be integrated with Chef/Ansible/Puppet for automating the Server Management tasks/operations.
 
 # Architecture
 
 ![alt text](https://github.com/openusm/openusm/blob/master/images/how_openusm_works.png)
 
 # How openUSM works?
+
+OpenUSM uses "Container-Per-Server(CPS)" model. For each server management tasks, there are Python-scripts which when executed builds and run Docker containers, uses Redfish API to communicate directly with Dell iDRAC, collects iDRAC/LC logs and pushes it to ELK(Elasticsearch, Logstash & Kibana) stack for further log analysis.For n-number of Dell Servers, the overall iDRAC/LC logs gets collected to centralized ELK stack which again runs as Microservices inside Docker containers. One can easily see iDRAC logs under Kibana UI. OpenUSM uses Prometheus Stack for monitoring System components like GPU/CPU monitoring using NVIDIA-DOCKER & Node Exporter. 
+
+
 
 ![alt text](https://github.com/openusm/openusm/blob/master/images/openusm_architecture.png)
 
