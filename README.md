@@ -55,7 +55,7 @@ Check out our guides for documentation, deployment guides and tutorials.
 
 # Roadmap ahead
 
-OpenUSM is written in Python - contributions are welcomed whether that means providing feedback, testing existing and new feature or hacking on the source.
+Refer [Report](https://github.com/openusm/openusm/tree/master/reports) section to track what new features and improvement are coming next in OpenUSM.
 
 # How do I become a contributor?
 
