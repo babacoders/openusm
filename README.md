@@ -49,11 +49,11 @@ OpenUSM is a suite of tools and utilities which configures and manage the lifecy
 [Pushing iDRAC Logs to ELK Stack](docs/idrac2elk.md)
 
 
-# Documentation
+## Documentation
 
 Check out our guides for documentation, deployment guides and tutorials.
 
-# Roadmap ahead
+## Roadmap ahead
 
 Refer [Report](https://github.com/openusm/openusm/tree/master/reports) section to track what new features and improvement are coming next in OpenUSM.
 
