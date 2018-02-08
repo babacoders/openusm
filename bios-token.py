@@ -53,13 +53,13 @@ def main():
 	    print ("Iteration %s"%ip)
 
 	    ip = ip.strip()	
-	    command = "docker run --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.42:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e NFS_SERVER=%s -e NFS_SERVER_SHARE=%s -e CONFIG_FILE=%s ajeetraina/usm_redfish python import_scp.py &"%(ip,ip,nfs_server,nfs_share,config)
+	    command = "docker run --rm --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.42:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e NFS_SERVER=%s -e NFS_SERVER_SHARE=%s -e CONFIG_FILE=%s ajeetraina/usm_redfish python import_scp.py &"%(ip,ip,nfs_server,nfs_share,config)
 	    print command
 	    os.system(command)
 
     if (args.idrac):
         os.system(
-                "docker run --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.42:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e NFS_SERVER=%s -e NFS_SERVER_SHARE=%s -e CONFIG_FILE=%s ajeetraina/usm_redfish  python import_scp.py &" % (
+                "docker run --rm --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.42:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e NFS_SERVER=%s -e NFS_SERVER_SHARE=%s -e CONFIG_FILE=%s ajeetraina/usm_redfish  python import_scp.py &" % (
                 idrac,idrac, nfs_server, nfs_share, config))
 
 if __name__ == '__main__':
