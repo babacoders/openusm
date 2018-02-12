@@ -4,7 +4,12 @@
 
 - [NFS Server](../docs/nfs-setup.md)
 - Latest version of Docker Installed (17.06+)
-- Python 2.7+ 
+- Python 2.7+ with pip installed
+
+```
+$apt install python-pip
+$pip install requests
+```
 - [Sample BIOS token placed under NFS share](../samples/biosconfig.xml)
 
 
