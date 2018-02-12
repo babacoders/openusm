@@ -68,3 +68,11 @@ ips.txt is a file which includes list of iDRAC IP address. Check out the same fi
 ## What does this script do?
 
 This script will create as many Docker containers based on number of systems. It means that for every iDRAC IP address, a Docker container will be spun up which does BIOS token change automatically. PLEASE NOTE THAT NO MANUAL REBOOT IS REQUIRED as LC automaticaly handle the job and rebooting the system.
+
+# Troubleshooting
+
+1. The bios-token.py runs well but the container gets exited suddenly
+
+As of now, the IP address has been hard coded into bios-token.py specific to syslog server. Hence, you might need to make changes manually. The fix will be provided ASAP.
+
+
