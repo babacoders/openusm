@@ -35,6 +35,12 @@ $ chcon -R system_u:object_r:admin_home_t:s0 docker-elk/
 
 ### Bringing up the stack
 
+Building the ELK stack
+
+```bash
+$ docker-compose build
+```
+
 Start the ELK stack using `docker-compose`:
 
 ```bash
@@ -60,7 +66,10 @@ By default, the stack exposes the following ports:
 
 Try updating the BIOS Token using [this](https://github.com/openusm/openusm/blob/master/docs/bios-token.md) link.
 
-Open up kibana and you can see that the logs as shown below:
+Open up kibana and you will need to add timestamp onto it.
+
+
+Now you can see that the logs as shown below:
 
 ![alt_text](https://github.com/openusm/openusm/blob/master/images/idrac_elk.png)
 
