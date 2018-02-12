@@ -35,6 +35,12 @@ $ chcon -R system_u:object_r:admin_home_t:s0 docker-elk/
 
 ### Bringing up the stack
 
+Building the Elastic Stack first:
+
+```bash
+$docker-compose build
+```
+
 Start the ELK stack using `docker-compose`:
 
 ```bash
