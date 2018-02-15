@@ -35,7 +35,6 @@ OpenUSM uses "Container-Per-Server(CPS)" model. For each server management tasks
 
 ## Preparing Your System
 
-[Windows 10](docs/os/windows-installation) <br>
 [Ubuntu](docs/os/ubuntu-installation) <br>
 [Debian](docs/os/debian-installation) <br>
 [CentOS](docs/os/centos-installation) <br>
