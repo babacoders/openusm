@@ -18,7 +18,7 @@ curl -fsSL https://get.docker.com/ | sh
 sudo systemctl start docker
 ```
 
-#Verify that Docker is running fine:
+## Verify that Docker is running fine:
 
 ```
 sudo systemctl status docker
