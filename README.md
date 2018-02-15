@@ -35,10 +35,10 @@ OpenUSM uses "Container-Per-Server(CPS)" model. For each server management tasks
 
 ## Preparing Your System
 
-[Ubuntu](docs/os/ubuntu-installation) <br>
-[Debian](docs/os/debian-installation) <br>
-[CentOS](docs/os/centos-installation) <br>
-[RHEL](docs/os/rhel-installation) <br>
+[Ubuntu](docs/os/ubuntu-installation.md) <br>
+[Debian](docs/os/debian-installation.md) <br>
+[CentOS](docs/os/centos-installation.md) <br>
+[RHEL](docs/os/rhel-installation.md) <br>
 
 OpenUSM is a suite of tools and utilities which configures and manage the lifecycle of system management. OpenUSM has a capability to perform the following functions:
 
