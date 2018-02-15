@@ -2,7 +2,6 @@
 
 ![alt text](https://github.com/openusm/openusm/blob/master/images/openusm_logo.png)
 
-
 A modern approach to Server Management solution integrated with monitoring & logging pipeline using Docker, Microservices & Redfish.
 
 # Highlights
