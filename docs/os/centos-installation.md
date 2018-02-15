@@ -24,11 +24,13 @@ sudo systemctl start docker
 sudo systemctl status docker
 ```
 
-## Installing Docker Compose
+## Installing Docker Compose using a single-liner command
 
 ```
 curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 ```
+
+## Providing right permission to compose binaries:
 
 ```
 chmod +x /usr/local/bin/docker-compose
