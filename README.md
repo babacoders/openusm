@@ -32,7 +32,7 @@ OpenUSM uses "Container-Per-Server(CPS)" model. For each server management tasks
 
 
 
-![alt text](https://github.com/openusm/openusm/blob/master/images/openusm_architecture.png)
+![openusm](https://github.com/openusm/openusm/blob/master/images/openusm_workflow.png)
 
 
 # Getting Started with OpenUSM
