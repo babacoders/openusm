@@ -10,6 +10,7 @@ A modern approach to DellEMC Server Management & Insight Logs Analytics solution
 - OpenUSM can be bundled as Docker Images which is lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings. Hence, no need of host dependencies packages
 - OpenUSM is an out-of-band system management solution purely based on Redfish API Interface.
 - It is a platform agnostic solution(can be run from laptop, server or cloud) and works on any of Linux or Windows platform with Docker Engine running on top of it.
+<br></br>
 
 ![alt text](https://github.com/openusm/openusm/blob/master/images/kibana_openusm.png)
 <p>    ------------------- Kibana visualizing Pie-Chart for LC logs collected over the last 1 year time period--------------------</p>
