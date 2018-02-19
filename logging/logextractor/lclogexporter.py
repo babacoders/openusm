@@ -1,11 +1,9 @@
-import requests
 import json
 import sys
 import re
 import time
 import os
 import warnings
-from elasticsearch import Elasticsearch
 from datetime import datetime
 import argparse
 
@@ -49,6 +47,7 @@ def main():
     elastic_username = args.elastic_username
     elastic_password = args.elastic_password
 
+    os.system("docker build -t ajeetraina/openusm-analytics . ")
     if (args.ips):
 
         ip_file = args.ips
@@ -59,7 +58,7 @@ def main():
             print ("Iteration %s" % ip)
 
         ip = ip.strip()
-        command = "docker run --rm --log-driver=syslog --log-opt syslog-address=tcp://0.0.0.0:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e IDRAC_USERNAME=%s -e IDRAC_PASSWORD=%s -e ELASTIC_IP=%s -e ELASTIC_USERNAME=%s -e ELASTIC_PASSWORD=%s ajeetraina/usm_redfish python import_scp.py &" % (
+        command = "docker run --rm --log-driver=syslog --log-opt syslog-address=tcp://0.0.0.0:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e IDRAC_USERNAME=%s -e IDRAC_PASSWORD=%s -e ELASTIC_IP=%s -e ELASTIC_USERNAME=%s -e ELASTIC_PASSWORD=%s ajeetraina/openusm-analytics python docker_lc_exporter.py &" % (
         ip, ip, 'root', 'calvin', elastic_ip,elastic_username,elastic_password)
         print command
         os.system(command)
@@ -67,7 +66,7 @@ def main():
     if (args.idrac):
         print ("Iteration %s" % args.idrac)
 
-        command = "docker run --rm --log-driver=syslog --log-opt syslog-address=tcp://0.0.0.0:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e IDRAC_USERNAME=%s -e IDRAC_PASSWORD=%s -e ELASTIC_IP=%s -e ELASTIC_USERNAME=%s -e ELASTIC_PASSWORD=%s ajeetraina/usm_redfish python import_scp.py &" % (
+        command = "docker run --rm --log-driver=syslog --log-opt syslog-address=tcp://0.0.0.0:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e IDRAC_USERNAME=%s -e IDRAC_PASSWORD=%s -e ELASTIC_IP=%s -e ELASTIC_USERNAME=%s -e ELASTIC_PASSWORD=%s ajeetraina/openusm-analytics python docker_lc_exporter.py &" % (
         idrac, idrac, 'root', 'calvin', elastic_ip,elastic_username,elastic_password)
 
         os.system(command)
