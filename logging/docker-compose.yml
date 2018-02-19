@@ -1,48 +1,39 @@
-version: '2'
+version: '3'
 
 services:
 
   elasticsearch:
-    build:
-      context: elasticsearch/
+    build: elasticsearch/
     volumes:
-      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    network_mode: host
     ports:
       - "9200:9200"
       - "9300:9300"
     environment:
       ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-    networks:
-      - elk
 
   logstash:
-    build:
-      context: logstash/
+    build: logstash/
     volumes:
-      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
-      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - ./logstash/pipeline:/usr/share/logstash/pipeline
+    restart: always
+    network_mode: host
     ports:
-      - "5000:5000"
+      - "514:5000"              
+      - "514:5000/udp"
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
-    networks:
-      - elk
     depends_on:
       - elasticsearch
 
   kibana:
-    build:
-      context: kibana/
+    build: kibana/
     volumes:
-      - ./kibana/config/:/usr/share/kibana/config:ro
+      - ./kibana/config/:/usr/share/kibana/config
     ports:
       - "5601:5601"
-    networks:
-      - elk
+    network_mode: host
     depends_on:
       - elasticsearch
-
-networks:
-
-  elk:
-    driver: bridge
