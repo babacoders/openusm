@@ -57,16 +57,16 @@ def main():
         for ip in ips:
             print ("Iteration %s" % ip)
 
-        ip = ip.strip()
-        command = "docker run --rm --log-driver=syslog --log-opt syslog-address=tcp://0.0.0.0:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e IDRAC_USERNAME=%s -e IDRAC_PASSWORD=%s -e ELASTIC_IP=%s -e ELASTIC_USERNAME=%s -e ELASTIC_PASSWORD=%s ajeetraina/openusm-analytics python docker_lc_exporter.py &" % (
-        ip, ip, 'root', 'calvin', elastic_ip,elastic_username,elastic_password)
-        print command
-        os.system(command)
+            ip = ip.strip()
+            command = "docker run --rm --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.60:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e IDRAC_USERNAME=%s -e IDRAC_PASSWORD=%s -e ELASTIC_IP=%s -e ELASTIC_USERNAME=%s -e ELASTIC_PASSWORD=%s ajeetraina/openusm-analytics python docker_lc_exporter.py &" % (
+            ip, ip, 'root', 'calvin', elastic_ip,elastic_username,elastic_password)
+            print command
+            os.system(command)
 
     if (args.idrac):
         print ("Iteration %s" % args.idrac)
 
-        command = "docker run --rm --log-driver=syslog --log-opt syslog-address=tcp://0.0.0.0:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e IDRAC_USERNAME=%s -e IDRAC_PASSWORD=%s -e ELASTIC_IP=%s -e ELASTIC_USERNAME=%s -e ELASTIC_PASSWORD=%s ajeetraina/openusm-analytics python docker_lc_exporter.py &" % (
+        command = "docker run --rm --log-driver=syslog --log-opt syslog-address=tcp://100.98.26.60:5000 --log-opt syslog-facility=daemon -itd --name=%s_server -e IDRAC_IP=%s -e IDRAC_USERNAME=%s -e IDRAC_PASSWORD=%s -e ELASTIC_IP=%s -e ELASTIC_USERNAME=%s -e ELASTIC_PASSWORD=%s ajeetraina/openusm-analytics python docker_lc_exporter.py &" % (
         idrac, idrac, 'root', 'calvin', elastic_ip,elastic_username,elastic_password)
 
         os.system(command)
