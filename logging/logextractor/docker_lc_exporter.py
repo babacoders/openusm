@@ -48,7 +48,7 @@ def getJSONResponse(next_url):
 
 def get_LC_logs():
     try:
-        es.indices.delete(index='lc_index')
+        es.delete(index='lc_index', doc_type='lc_doc'+str(idrac_ip))
     except Exception as e:
         pass
 
@@ -64,8 +64,6 @@ def get_LC_logs():
         'Name',
         'OemRecordFormat',
         'Severity']
-
-    df = pd.DataFrame(columns=columns)
 
     system_name = getSystemName()
 
@@ -98,7 +96,7 @@ def get_LC_logs():
 
                 }
                 #                 df.loc[len(df)] = data_dict
-                es.create(index='lc_index', doc_type='lc_doc', id=str(i[u'Id']), body=data_dict)
+                es.create(index='lc_index', doc_type='lc_doc'+str(idrac_ip), id=str(i[u'Id']), body=data_dict)
 
             print("#" * 100)
             time.sleep(2)
@@ -108,7 +106,7 @@ def get_LC_logs():
     except KeyError as e:
 
         print("Error:", e)
-        print(dir(e))
+
 
         for i in data[u'Members']:
             data_dict = {
@@ -127,11 +125,11 @@ def get_LC_logs():
 
             }
             #             df.loc[len(df)] = data_dict
-            es.create(index='lc_index', doc_type='lc_doc', id=str(i[u'Id']), body=data_dict)
+            es.create(index='lc_index', doc_type='lc_doc'+str(idrac_ip), id=str(i[u'Id']), body=data_dict)
 
             print("%s : %s" % ('Id', i[u'Id']))
 
-    return (df)
+    return
 
 
 
