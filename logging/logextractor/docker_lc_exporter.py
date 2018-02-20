@@ -132,8 +132,48 @@ def get_LC_logs():
     return
 
 
+def get_SEL_logs():
+    try:
+        es.delete(index='sel_index', doc_type='sel_doc'+str(idrac_ip))
+    except Exception as e:
+        pass
+
+
+    system_name = getSystemName()
+
+    print(system_name)
+
+    data = getJSONResponse('/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Sel')
+
+    for i in data[u'Members']:
+        print("%s : %s" % ('Id', i[u'Id']))
+        data_dict = {
+            'Idrac_Ip': idrac_ip,
+            'Server_Model': system_name,
+            'Created': i[u'Created'],
+            'Description': i[u'Description'],
+            'EntryType': i[u'EntryType'],
+            'EntryCode': i[u'EntryCode'][0]['Member'],
+            'Id': i[u'Id'],
+            'Message': i[u'Message'],
+            'MessageID': i[u'MessageID'],
+            'Name': i[u'Name'],
+            'SensorNumber': i[u'SensorNumber'],
+            'SensorType': i[u'SensorType'][0]['Member'],
+            'Severity': i[u'Severity'],
+        }
+
+        es.create(index='sel_index', doc_type='sel_doc'+str(idrac_ip), id=str(i[u'Id']), body=data_dict)
+
+    print("#" * 100)
+    time.sleep(2)
+
+
+
 
 
 get_LC_logs()
+
+get_SEL_logs()
 
 
