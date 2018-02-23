@@ -62,3 +62,7 @@ Refer [Report](https://github.com/openusm/openusm/tree/master/reports) section t
 # How do I become a contributor?
 
 We invite new contributors to contribute towards this project repository. We would also ask you to propose any improvements or contributions for future releases.
+
+# Quick Videos/ Resources
+
+[![Pushing iDRAC Logs to ELK Stack](https://github.com/openusm/openusm/blob/master/images/idrac_elk_logs.png)](https://www.youtube.com/watch?v=jbg4gcp0M8M)
