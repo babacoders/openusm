@@ -2,7 +2,7 @@
 
 ![alt text](https://github.com/openusm/openusm/blob/master/images/openusm_logo.png)
 
-A modern approach to DellEMC Server Management & Insight Logs Analytics solution integrated with monitoring & logging pipeline using Docker,  Redfish & ELK Stack.
+A modern approach to DellEMC Server Management & Insight Logs Analytics solution integrated with monitoring & logging pipeline using Docker,  Redfish, Prometheus & ELK Stack.
 
 # Highlights
 
