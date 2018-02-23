@@ -3,6 +3,16 @@
 
 ![alt text](https://github.com/openusm/openusm/blob/master/images/elk_stack_overview.png)
 
+# Why we chose ELK?
+
+- ELK is known for its speed and full-text capability
+- High Performance indexing over 150GB/hour on all our modern hardware
+- It requires smaller RAM – only 1 MB heap
+- A Powerful, accurate and efficient search algorithm
+- Easy to setup with a single Docker Compose file 
+- Powerful query types: phrase queries, wildcard queries, range queries and more fielded searching (e.g. title, author, contents)
+- Integrated well with Prometheus which is popular for real-time monitoring
+
 
 # ELK stack for iDRAC Logs
 
