@@ -24,7 +24,7 @@ A modern approach to DellEMC Server Management & Insight Logs Analytics solution
 
 # Architecture
 
-![alt text](https://github.com/openusm/openusm/blob/master/images/how_openusm_works.png)
+![alt text](https://github.com/openusm/openusm/blob/master/images/openusm_technology_overview.png)
 
 # How openUSM works?
 
