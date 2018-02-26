@@ -12,6 +12,8 @@ install:
 before_script:
   - pip install requests
  
+travis env set DOCKER_USERNAME openusm
+travis env set DOCKER_PASSWORD Oracle9ias
 
 script:
   - python bios-token.py --help
