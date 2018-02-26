@@ -10,8 +10,6 @@ install:
   
 
 before_script:
-  - pip install -r requirements.txt
-  - pip install mock
   - pip install requests
  
 
